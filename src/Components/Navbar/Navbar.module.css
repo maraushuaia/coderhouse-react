@@ -1,0 +1,20 @@
+.containerNavbar {
+  width: 100%;
+  background-color: #6f42c1;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.containerMenu {
+  color: white;
+  display: flex;
+  justify-content: right;
+  gap: 30px;
+}
+
+.logoText {
+  color: white;
+  padding-left: 0.4rem;
+}
