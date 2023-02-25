@@ -1,10 +1,13 @@
+import { Box } from "@mui/system";
+import ItemListContainer from "./Components/ItemListContainer/ItemListContainer";
 import Navbar from "./Components/Navbar/Navbar";
 
 function App() {
   return (
-    <div>
+    <Box>
       <Navbar></Navbar>
-    </div>
+      <ItemListContainer greeting={"Bienvenido: Rodrigo"} />
+    </Box>
   );
 }
 
