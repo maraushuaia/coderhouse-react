@@ -1,13 +1,16 @@
-import { Box } from "@mui/system";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import ItemListContainer from "./Components/ItemListContainer/ItemListContainer";
 import Navbar from "./Components/Navbar/Navbar";
 
 function App() {
   return (
-    <Box>
-      <Navbar></Navbar>
-      <ItemListContainer greeting={"Bienvenido: Rodrigo"} />
-    </Box>
+    <BrowserRouter>
+      <Navbar />
+
+      <Routes>
+        <Route path="/" element={<ItemListContainer />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 

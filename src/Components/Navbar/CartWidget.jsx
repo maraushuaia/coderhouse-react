@@ -1,12 +1,5 @@
-import ShoppingBasketIcon from "@mui/icons-material/ShoppingBasket";
-import { Box } from "@mui/material";
-
-const CartWidget = (greeting) => {
-  return (
-    <Box>
-      <ShoppingBasketIcon style={{ color: "white", height: "2" }} />
-    </Box>
-  );
+const CartWidget = () => {
+  return <div>CartWidget</div>;
 };
 
 export default CartWidget;
