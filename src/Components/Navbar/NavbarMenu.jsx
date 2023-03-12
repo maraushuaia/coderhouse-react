@@ -1,20 +1,27 @@
-import { Box } from "@mui/material";
+import * as React from "react";
+import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
-import Stack from "@mui/material/Stack";
 
-const NavbarMenu = () => {
+const pages = ["Causas en Curso", "Causas Históricas", "Noticias"];
+
+const OptionsMenu = () => {
   return (
     <Box sx={{ display: { xs: "none", sm: "none", md: "block" } }}>
-      <Stack direction="row" spacing={2}>
-        <Button variant="outlined" color="inherit">
-          Causas en Curso
-        </Button>
-        <Button variant="outlined" color="inherit">
-          Causas Historicas
-        </Button>
-      </Stack>
+      <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
+        {pages.map((page) => (
+          <Button
+            key={page}
+            sx={{
+              my: 2,
+              color: "white",
+              display: "block",
+            }}
+          >
+            {page}
+          </Button>
+        ))}
+      </Box>
     </Box>
   );
 };
-
-export default NavbarMenu;
+export default OptionsMenu;

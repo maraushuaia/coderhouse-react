@@ -1,19 +1,20 @@
 import * as React from "react";
 import AppBar from "@mui/material/AppBar";
 import Toolbar from "@mui/material/Toolbar";
-import Typography from "@mui/material/Typography";
 import MenuItem from "@mui/material/MenuItem";
 import Menu from "@mui/material/Menu";
-import MenuIcon from "@mui/icons-material/Menu";
 import AccountCircle from "@mui/icons-material/AccountCircle";
 import MoreIcon from "@mui/icons-material/MoreVert";
-import NavbarMenu from "./NavbarMenu";
+import OptionsMenu from "./NavbarMenu";
 import Box from "@mui/material/Box";
 import IconButton from "@mui/material/IconButton";
 import Badge from "@mui/material/Badge";
 import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
+import MenuDrawer from "./MenuDrawer";
+import Logo from "./Logo";
+import CartWidget from "./CartWidget";
 
-export default function PrimarySearchAppBar() {
+const NavbarPrimary = () => {
   const [anchorEl, setAnchorEl] = React.useState(null);
   const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
 
@@ -55,12 +56,8 @@ export default function PrimarySearchAppBar() {
       onClose={handleMobileMenuClose}
     >
       <MenuItem>
-        <IconButton
-          size="large"
-          aria-label="show 17 new notifications"
-          color="inherit"
-        >
-          <Badge badgeContent={17} color="error">
+        <IconButton size="large" aria-label="show 2 causas" color="inherit">
+          <Badge badgeContent={2} color="error">
             <AddShoppingCartIcon />
           </Badge>
         </IconButton>
@@ -86,39 +83,10 @@ export default function PrimarySearchAppBar() {
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static">
         <Toolbar>
-          <IconButton
-            size="large"
-            edge="start"
-            color="inherit"
-            aria-label="open drawer"
-            sx={{ mr: 2 }}
-          >
-            <MenuIcon />
-          </IconButton>
-          <Typography
-            variant="h6"
-            noWrap
-            component="div"
-            sx={{ display: { xs: "block", sm: "block" } }}
-          >
-            JUZGADO DE FALTAS
-          </Typography>
-          <Box sx={{ flexGrow: 1 }} />
-          <Box>
-            <NavbarMenu />
-          </Box>
-          <Box sx={{ display: { xs: "none", md: "flex" } }}>
-            <IconButton
-              size="large"
-              aria-label="show 2 products"
-              color="inherit"
-            >
-              <Badge badgeContent={2} color="error">
-                <AddShoppingCartIcon />
-              </Badge>
-            </IconButton>
-          </Box>
-
+          <MenuDrawer />
+          <Logo />
+          <OptionsMenu />
+          <CartWidget />
           <Box sx={{ display: { xs: "flex", md: "none" } }}>
             <IconButton
               size="large"
@@ -136,4 +104,6 @@ export default function PrimarySearchAppBar() {
       {renderMobileMenu}
     </Box>
   );
-}
+};
+
+export default NavbarPrimary;

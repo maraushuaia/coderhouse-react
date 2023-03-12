@@ -1,10 +1,22 @@
-import { Box } from "@mui/system";
+import { Box, Container } from "@mui/material";
+import CardCausa from "../CardCausa/CardCausa";
 
 const ItemListContainer = ({ greeting }) => {
   return (
-    <Box>
-      <h3>{greeting}</h3>
-    </Box>
+    <Container maxWidth="lg">
+      <Box
+        sx={{
+          display: { xs: "block", md: "flex" },
+          justifyContent: "space-between",
+          paddingTop: "2em",
+        }}
+      >
+        <CardCausa></CardCausa>
+        <CardCausa></CardCausa>
+        <CardCausa></CardCausa>
+      </Box>
+      <Box></Box>
+    </Container>
   );
 };
 
