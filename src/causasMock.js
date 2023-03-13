@@ -1,0 +1,48 @@
+export const causas = [
+  {
+    id: 1,
+    nroCausa: "T-123456-0/2022",
+    origen: "Tránsito",
+    importe: 250000,
+    stock: 2,
+    infraccion:
+      "Conducir bajos los efectos del alcohol y con alcoholemia positiva.",
+    tipo: "Grave",
+    img: "https://res.cloudinary.com/dtvrg3by2/image/upload/v1678664190/CoderHoseReact/causa1_lrxxyo.png",
+    estado: "En curso",
+  },
+  {
+    id: 2,
+    nroCausa: "Z-111234-0/2023",
+    origen: "Zoonosis",
+    importe: 50000,
+    stock: 2,
+    infraccion: "Can en la vía pública. Sín medio de agarre ni seguridad.",
+    tipo: "Leve",
+    img: "https://res.cloudinary.com/dtvrg3by2/image/upload/v1678667685/CoderHoseReact/zoonosis2_zslxvj.png",
+    estado: "En curso",
+  },
+  {
+    id: 3,
+    nroCausa: "H-001234-0/2021",
+    origen: "Habilitaciones Comerciales",
+    importe: 80000,
+    stock: 2,
+    infraccion: "Ejercer actividad comercial sin habilitación municipal.",
+    tipo: "Grave",
+    img: "https://res.cloudinary.com/dtvrg3by2/image/upload/v1678667310/CoderHoseReact/habilitaciones_qgpbs6.png",
+    estado: "Archivada",
+  },
+  {
+    id: 4,
+    nroCausa: "T-234567-0/2022",
+    origen: "Tránsito",
+    importe: 4900,
+    stock: 2,
+    infraccion:
+      "Estacionar dentro de los 5 metros de edificación, sin respectar distancia mínimas.",
+    tipo: "Leve",
+    img: "https://res.cloudinary.com/dtvrg3by2/image/upload/v1678668052/CoderHoseReact/Transito2_l2wtge.png",
+    estado: "Archivada",
+  },
+];

@@ -1,22 +1,35 @@
-import { Box, Container } from "@mui/material";
-import CardCausa from "../CardCausa/CardCausa";
+import { useState, useEffect } from "react";
+import { useParams } from "react-router-dom";
+import { causas } from "../../causasMock";
+import ItemList from "../ItemList/ItemList";
 
-const ItemListContainer = ({ greeting }) => {
+const ItemListContainer = () => {
+  const { categoryName } = useParams();
+
+  const [items, setItems] = useState([]);
+
+  const causasFiltradas = causas.filter(
+    (elemento) => elemento.category === categoryName
+  );
+
+  useEffect(() => {
+    const causasList = new Promise((resolve, reject) => {
+      resolve(categoryName ? causasFiltradas : causas);
+    });
+
+    causasList
+      .then((res) => {
+        setItems(res);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  }, [categoryName]);
+
   return (
-    <Container maxWidth="lg">
-      <Box
-        sx={{
-          display: { xs: "block", md: "flex" },
-          justifyContent: "space-between",
-          paddingTop: "2em",
-        }}
-      >
-        <CardCausa></CardCausa>
-        <CardCausa></CardCausa>
-        <CardCausa></CardCausa>
-      </Box>
-      <Box></Box>
-    </Container>
+    <div>
+      <ItemList items={items} />
+    </div>
   );
 };
 

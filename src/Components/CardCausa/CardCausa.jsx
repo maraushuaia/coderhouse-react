@@ -27,7 +27,7 @@ const ExpandMore = styled((props) => {
   }),
 }));
 
-const CardCausa = () => {
+const CardCausa = ({ element }) => {
   const [expanded, setExpanded] = React.useState(false);
 
   const handleExpandClick = () => {
@@ -47,7 +47,7 @@ const CardCausa = () => {
             <MoreVertIcon />
           </IconButton>
         }
-        title="Shrimp and Chorizo Paella"
+        title={element.origen}
         subheader="September 14, 2016"
       />
       <CardMedia
