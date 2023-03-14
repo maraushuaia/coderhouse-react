@@ -54,13 +54,21 @@ export const CardCausa = ({ element }) => {
         </Typography>
       </CardContent>
       <CardActions>
-        <Link to={`/itemDetail/${element.id}`}>
+        <Link
+          to={`/itemDetail/${element.id}`}
+          style={{ textDecoration: "none" }}
+        >
           <Button size="small" variant="contained" color="secondary">
             Ver detalle
           </Button>
         </Link>
-        <Link to={``}>
-          <Button size="small" variant="contained" color="success">
+        <Link to={``} style={{ textDecoration: "none" }}>
+          <Button
+            size="small"
+            variant="contained"
+            color="success"
+            textDecoration="none"
+          >
             Agregar al Carrito
           </Button>
         </Link>

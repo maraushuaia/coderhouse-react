@@ -4,17 +4,17 @@ import { causas } from "../../causasMock";
 import ItemList from "../ItemList/ItemList";
 
 const ItemListContainer = () => {
-  const { categoryName } = useParams();
+  const { estado } = useParams();
 
   const [items, setItems] = useState([]);
 
   const causasFiltradas = causas.filter(
-    (elemento) => elemento.category === categoryName
+    (elemento) => elemento.estado === estado
   );
 
   useEffect(() => {
     const causasList = new Promise((resolve, reject) => {
-      resolve(categoryName ? causasFiltradas : causas);
+      resolve(estado ? causasFiltradas : causas);
     });
 
     causasList
@@ -24,7 +24,7 @@ const ItemListContainer = () => {
       .catch((error) => {
         console.log(error);
       });
-  }, [categoryName]);
+  }, [estado]);
 
   return (
     <div>

@@ -1,8 +1,9 @@
 import * as React from "react";
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
+import { Link } from "react-router-dom";
 
-const pages = ["Causas en Curso", "Causas Históricas", "Noticias"];
+const pages = ["En Curso", "Archivadas", "Noticias"];
 
 const OptionsMenu = () => {
   return (
@@ -17,9 +18,11 @@ const OptionsMenu = () => {
               display: "block",
             }}
           >
+            <Link to="/estado/"></Link>
             {page}
           </Button>
         ))}
+        {console.log({ pages })}
       </Box>
     </Box>
   );

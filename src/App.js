@@ -4,7 +4,6 @@ import ItemDetailContainer from "./Components/ItemDetailContainer/ItemDetailCont
 import ItemListContainer from "./Components/ItemListContainer/ItemListContainer";
 import Login from "./Components/Login/Login";
 import Navbar from "./Components/Navbar/Navbar";
-import ProductsBack from "./Components/ProductsBack/ProductsBack";
 
 function App() {
   return (
@@ -13,17 +12,10 @@ function App() {
 
       <Routes>
         <Route path="/" element={<ItemListContainer />} />
-
-        <Route path="/category/:categoryName" element={<ItemListContainer />} />
-
+        <Route path="/estado/:estado" element={<ItemListContainer />} />
         <Route path="/cart" element={<Cart />} />
-
         <Route path="/itemDetail/:id" element={<ItemDetailContainer />} />
-
         <Route path="/login" element={<Login />} />
-
-        <Route path="/productsBack" element={<ProductsBack />} />
-
         <Route path="*" element={<h1> error 404: Not found </h1>} />
       </Routes>
     </BrowserRouter>
