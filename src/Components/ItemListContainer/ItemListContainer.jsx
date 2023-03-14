@@ -12,6 +12,7 @@ const ItemListContainer = () => {
     (elemento) => elemento.estado === estado
   );
 
+  
   useEffect(() => {
     const causasList = new Promise((resolve, reject) => {
       resolve(estado ? causasFiltradas : causas);

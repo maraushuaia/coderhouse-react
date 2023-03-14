@@ -10,7 +10,6 @@ import Box from "@mui/material/Box";
 import IconButton from "@mui/material/IconButton";
 import Badge from "@mui/material/Badge";
 import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
-import MenuDrawer from "./MenuDrawer";
 import Logo from "./Logo";
 import CartWidget from "./CartWidget";
 
@@ -83,7 +82,7 @@ const NavbarPrimary = () => {
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static">
         <Toolbar>
-          <MenuDrawer />
+          
           <Logo />
           <OptionsMenu />
           <CartWidget />

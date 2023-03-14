@@ -1,3 +1,4 @@
+import { Box, Container} from "@mui/material";
 import React from "react";
 import { useParams } from "react-router-dom";
 import { causas } from "../../causasMock";
@@ -13,12 +14,28 @@ const ItemDetailContainer = () => {
   };
 
   return (
-    <div>
-      <h1>{causaSelected.title}</h1>
-      <img src={causaSelected.img} alt="" width="320em" height="320em" />
-      <ItemCount stock={causaSelected.stock} onAdd={onAdd} />
-    </div>
+    
+    <Container maxWidth="md" style={{marginTop:"2em"}}>
+      <Box>
+          <Box style={{textAlign: "left"}}>
+              <h3>Origen de la Infracción: {causaSelected.origen}</h3>
+              <h4>Número de Causa: {causaSelected.nroCausa}</h4>
+              <h4>Fecha de Infracción: {causaSelected.fechaInfraccion}</h4>
+          </Box>
+          <Box style={{textAlign:"center"}}>
+               <img src={causaSelected.img} alt="" width="420em" height="420em" />
+          </Box>
+
+          <Box style={{textAlign: "left"}}>
+            <h4>Importe de la Multa: ${causaSelected.importe}</h4>
+            <span>Infracción: {causaSelected.infraccion}</span>
+            <ItemCount stock={causaSelected.stock} onAdd={onAdd} />
+          </Box>
+      </Box>
+    </Container>
+    
   );
 };
 
 export default ItemDetailContainer;
+

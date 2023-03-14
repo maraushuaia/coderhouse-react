@@ -3,6 +3,7 @@ export const causas = [
     id: 1,
     nroCausa: "T-123456-0/2022",
     origen: "Tránsito",
+    fechaInfraccion: "12/10/2022",
     importe: 250000,
     stock: 2,
     infraccion:
@@ -15,6 +16,7 @@ export const causas = [
     id: 2,
     nroCausa: "Z-111234-0/2023",
     origen: "Zoonosis",
+    fechaInfraccion: "01/01/2023",
     importe: 50000,
     stock: 2,
     infraccion: "Can en la vía pública. Sín medio de agarre ni seguridad.",
@@ -26,6 +28,7 @@ export const causas = [
     id: 3,
     nroCausa: "H-001234-0/2021",
     origen: "Habilitaciones Comerciales",
+    fechaInfraccion: "01/05/2021",
     importe: 80000,
     stock: 2,
     infraccion: "Ejercer actividad comercial sin habilitación municipal.",
@@ -37,6 +40,7 @@ export const causas = [
     id: 4,
     nroCausa: "T-234567-0/2022",
     origen: "Tránsito",
+    fechaInfraccion: "01/09/2022",
     importe: 4900,
     stock: 2,
     infraccion:
